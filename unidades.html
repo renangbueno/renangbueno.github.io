@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="unidades.css">
+    <script src="js/landing-page.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Oswald&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="imagem-menu">
+            <div class="menu">
+                <a href="index.html">Início</a>
+                <a href="unidades.html">Unidades</a>
+                <a href="reservas.html">Reservas</a>
+                <a href="#about">Menu3</a>
+            </div>
+            <div class="texto-menu">
+                <h1>Nome da sua empresa</h1>
+                <p>Conteúdo do menu...</p>
+            </div>
+        </div>
+    </header>
+    <div class="cabeçalho">
+        <h1>Conheça nossas unidades</h1>
+        <div class="conteudo">   
+            <div class="coluna">    
+                <h2 style="margin-bottom: 0.5%;">Nome unidade 1</h2>
+                <p style="margin-top: 0;  font-style: italic;">Avenida XV de fevereiro, 15</p>
+                <div class="grid-container">
+                    <img src="quadrado.png" alt="Foto 1">
+                    <img src="quadrado.png" alt="Foto 2">
+                    <img src="quadrado.png" alt="Foto 3">
+                    <img src="quadrado.png" alt="Foto 3">
+                    <img src="quadrado.png" alt="Foto 1">
+                    <img src="quadrado.png" alt="Foto 2">
+                </div>
+            </div>
+            <div class="coluna">
+                <h2 style="margin-bottom: 0.5%;">Nome unidade 2</h2>
+                <p style="margin-top: 0;  font-style: italic;">Avenida XV de fevereiro, 15</p>
+                <div class="grid-container">
+                    <img src="quadrado.png" alt="Foto 1">
+                    <img src="quadrado.png" alt="Foto 2">
+                    <img src="quadrado.png" alt="Foto 3">
+                    <img src="quadrado.png" alt="Foto 3">
+                    <img src="quadrado.png" alt="Foto 1">
+                    <img src="quadrado.png" alt="Foto 2">
+                </div>
+            </div>
+            <div class="coluna">
+                <h2 style="margin-bottom: 0.5%;">Nome unidade 3</h2>
+                <p style="margin-top: 0;  font-style: italic;">Avenida XV de fevereiro, 15</p>
+                <div class="grid-container">
+                    <img src="quadrado.png" alt="Foto 1">
+                    <img src="quadrado.png" alt="Foto 2">
+                    <img src="quadrado.png" alt="Foto 3">
+                    <img src="quadrado.png" alt="Foto 3">
+                    <img src="quadrado.png" alt="Foto 1">
+                    <img src="quadrado.png" alt="Foto 2">
+                </div>
+            </div>
+             <div class="coluna">
+                <h2 style="margin-bottom: 0.5%;">Nome unidade 2</h2>
+                <p style="margin-top: 0;  font-style: italic;">Avenida XV de fevereiro, 15</p>
+                <div class="grid-container">
+                    <img src="quadrado.png" alt="Foto 1">
+                    <img src="quadrado.png" alt="Foto 2">
+                    <img src="quadrado.png" alt="Foto 3">
+                    <img src="quadrado.png" alt="Foto 3">
+                    <img src="quadrado.png" alt="Foto 1">
+                    <img src="quadrado.png" alt="Foto 2">
+                </div>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright &copy; 2022 Nome da sua empresa</p>
+        <p><a href="mailto:exemplo@empresa.com">exemplo@empresa.com</a></p>
+    </footer>
+</body>
+<script>
+    $(document).ready(function(){
+        var hoverTimeout;
+        $('.coluna').hover(function() {
+            var $this = $(this); // referência ao elemento atual
+            hoverTimeout = setTimeout(function() {
+                $this.addClass('hover');
+            }, 1000); // 1000ms = 1s
+        }, function() {
+            clearTimeout(hoverTimeout);
+            $(this).removeClass('hover');
+        });
+    });
+    </script>
+</html>
