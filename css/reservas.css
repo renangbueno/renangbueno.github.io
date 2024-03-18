@@ -1,0 +1,281 @@
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+body {
+    animation: fadeIn 1s ease-in;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    height: 100vh;
+}
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+    padding-top: 0.8%;
+    padding-bottom: 0px;
+}
+.cabeçalho{
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.coluna{
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+    margin: 2px;
+    margin-top: 0px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    height: 70vh;
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    position: absolute;
+    margin-bottom: 0px;
+    width: 100%;
+    margin-top: 1%;
+}
+
+
+.imagem-menu {
+    background-image: url('quadrado.png');
+    background-size: cover;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    margin: 0;
+    background-position: cover;
+    justify-content: center; /* Alinha os itens horizontalmente no centro */
+    align-items: center; /* Alinha os itens verticalmente */
+    flex-direction: column; /* Faz os itens ficarem em uma linha */
+}
+
+.menu {
+    display: flex;
+    gap: 100px;
+    top: 1.5%;
+    position: absolute;
+}
+
+.menu a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.menu a:hover{
+    background-color: rgb(255, 255, 255);
+    color: #f2f2f2;
+    transition: 0.6s;
+    color: black;
+}
+
+.texto-menu {
+    text-align: center;
+    color: white;
+}
+
+.botoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.botoes button{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: #e6e6e6;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.hidden-radio {
+    display: none;
+    color: black;
+    width: 50%;
+}
+
+.styled-button {
+    margin: 10px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: #e6e6e6;
+    color: rgb(88, 84, 84);
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.styled-button:hover{
+    background-color: #000000;
+    color: white;
+}
+
+.subtexto{
+    color: rgb(84, 84, 84);
+    font-style: italic; 
+    font-size: 90%;
+}
+
+.hidden-radio:checked + .styled-button{
+    background-color: #000000;
+    color: white;
+}
+
+.styled-button:hover .subtexto {
+    color: white;
+    transition: 0.6s;
+}
+
+.hidden-radio:checked + .styled-button .subtexto {
+    color: white;
+}
+
+.horario {
+    height: 48px;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 200px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .horario option {
+    padding: 5px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .horario option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .horario option:checked {
+    background-color: #9e9e9e;
+    color: #fff;
+  }
+
+.botao {
+    margin-top: 1%;
+    display: inline-block;
+    font-size: 15px;
+    text-align: center;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    outline: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    background-color: #2b2b2b;
+    color: #FFFFFF;
+}
+
+.botao:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.botao:active {
+    background-color: #1a1a1a;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.10);
+}
+
+input[type="text"], input[type="tel"], input[type="date"] {
+    width: 30%;
+    height: 35px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+input[type="text"]:focus, input[type="tel"]:focus, input[type="date"]:focus {
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+@media (max-width: 600px) {
+    .conteudo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coluna {
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .imagem-menu {
+        height: 100px;
+    }
+
+    .botoes {
+        flex-direction: column;
+    }
+
+    .botoes button, .styled-button {
+        width: 100%;
+    }
+
+    .horario, input[type="text"], input[type="tel"], input[type="date"] {
+        width: 100%;
+    }
+
+    input{
+        width: 50%;
+    }
+}

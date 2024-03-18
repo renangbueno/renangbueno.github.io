@@ -1,0 +1,136 @@
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+body {
+    animation: fadeIn 1s ease-in;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+    
+}
+.cabeçalho{
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.coluna{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    justify-content: left;
+    text-align: left;
+    margin: 10px;
+    height: 60vh;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    position: absolute;
+    margin-bottom: 0px;
+    width: 100%;
+    
+}
+
+
+.imagem-menu {
+background-image: url('quadrado.png');
+background-size: cover;
+width: 100%;
+height: 300px;
+display: flex;
+margin: 0;
+background-position: cover;
+justify-content: center; /* Alinha os itens horizontalmente no centro */
+align-items: center; /* Alinha os itens verticalmente */
+flex-direction: column; /* Faz os itens ficarem em uma linha */
+}
+
+.menu {
+display: flex;
+gap: 100px;
+top: 1.5%;
+position: absolute;
+}
+
+.menu a {
+color: white;
+padding: 14px 16px;
+text-decoration: none;
+}
+.menu a:hover{
+background-color: rgb(255, 255, 255);
+color: #f2f2f2;
+transition: 0.6s;
+color: black;
+}
+
+.texto-menu {
+text-align: center;
+color: white;
+}
+
+.botao {
+margin-top: auto;
+    display: inline-block;
+    font-size: 15px;
+    text-align: center;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    outline: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    background-color: #2b2b2b;
+    color: #FFFFFF;
+}
+
+.botao:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.botao:active {
+    background-color: #1a1a1a;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.10);
+}
+
+.imagensantigas{
+    display: flex;
+    padding: 1%;
+    justify-content: center;
+    margin: 10px;
+    flex-wrap: wrap;}
+
+.imagensantigas img{
+    width: 20%;
+    height: 300px;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+   
