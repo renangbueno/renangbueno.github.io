@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="reservas.css">
+    <link rel="stylesheet" href="css/reservas.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Oswald&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
@@ -17,7 +17,7 @@
                 <a href="index.html">Início</a>
                 <a href="unidades.html">Unidades</a>
                 <a href="reservas.html">Reservas</a>
-                <a href="#about">Menu3</a>
+                <a href="sobre.html">Sobre nós</a>
             </div>
         </div>
     </header>
@@ -42,22 +42,39 @@
             <input type="text" id="nome" name="nome" placeholder="Nome e sobrenome">
             <p>Insira seu telefone:</p>
             <input type="tel" name="telefone" size="20" minlength="10" maxlength="11" id="telefone" name="telefone" placeholder="43911111111">
+            <p>Escolha o dia e horário:</p>            
             <input type="date" id="dia" name="dia" required>
-
-            <input type="time" id="hora" name="hora" required>
             <select class="horario" id="horario">
                 <option value="08:00">08:00</option>
                 <option value="08:30">08:30</option>
                 <option value="09:00">09:00</option>
                 <option value="09:30">09:30</option>
-                <!-- Adicione mais opções conforme necessário -->
+                <option value="10:00">10:00</option>
+                <option value="10:30">10:30</option>
               </select>
+            <p>Escolha o serviço:</p>
+            <select class="horario" id="servico">
+                <option value="Corte">Corte (R$30)</option>
+                <option value="Barba">Barba (R$25)</option>
+                <option value="Corte e Barba">Corte e Barba (R$45)</option>
+                <option value="Pacote">Pacote (R$60)</option>
+              </select>
+              <br>
+            <button class="botao" id="botao">Reservar</button>
         </div>
-        
-        
+    </div>
+    <div class="conteudo">
+        <div class="coluna">
+            <h2>Ver reserva</h2>
+            <p>Insira seu telefone:</p>
+            <input type="tel" name="telefone" size="20" minlength="10" maxlength="11" id="telefone2" name="telefone" placeholder="43911111111">
+            <p>Insira número da reserva:</p>
+            <input type="text" id="reserva" name="reserva" placeholder="Número da reserva"><br>
+            <button class="botao" id="botao2">Ver reserva</button>
+        </div>
     </div>
     <footer>
-        <p>Copyright &copy; 2022 Nome da sua empresa</p>
+        <p>Copyright &copy; 2024 Nova Era Barber Lounge</p>
         <p><a href="mailto:exemplo@empresa.com">exemplo@empresa.com</a></p>
     </footer>
     <script src="js/reservas.js"></script>
