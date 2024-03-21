@@ -20,7 +20,8 @@ function salvarReserva() {
         dia: diaFormatado,
         horario: document.getElementById('horario').value,
         servico: document.getElementById('servico').value,
-        nreserva: nreserva
+        nreserva: nreserva,
+        pagou: false
     };
     reservas.push(reserva);
     localStorage.setItem('reservas', JSON.stringify(reservas)); // armazena a lista completa de reservas
@@ -29,6 +30,7 @@ function salvarReserva() {
     document.getElementById('form-reserva').reset();
 }
 
+var numerorandom=0;
 function buscarReserva(telefone, nreserva) {
     var reservas = JSON.parse(localStorage.getItem('reservas')); // lê a lista completa de reservas
     for (var i = 0; i < reservas.length; i++) {
@@ -36,6 +38,19 @@ function buscarReserva(telefone, nreserva) {
 
             $('#dadoscliente').html('Olá, ' + reservas[i].nome + '<br>Seu telefone é: ' + reservas[i].telefone + '<br>Você tem uma reserva para o dia: ' + reservas[i].dia + 
             '<br>Horário: ' + reservas[i].horario + '<br>Serviço: ' + reservas[i].servico + '<br>Valor: R$ ' + valores[reservas[i].servico] + ',00' + '<br>Número da reserva: ' + reservas[i].nreserva);
+            if(reservas[i].pagou === true){
+                $('#pagarpagar').hide();
+                $('.pagpix').show();
+                $('.pagpix').css({'color': 'green', 'font-size': '20px', 'font-weight': 'bold'})
+                $('#dadospagamento').html('Pagamento confirmado');
+
+            }
+            else{
+                $('.pagpix').css({'color': 'red', 'font-size': '20px', 'font-weight': 'bold'})
+                $('.pagpix').show();
+                $('#dadospagamento').html('<b>Para confirmar sua reserva, efetue o pagamento de R$ ' + valores[reservas[i].servico] + ',00' + '</b><br>');
+                numerorandom = i;
+            }
             return reservas[i];
         }
     }
@@ -59,5 +74,16 @@ $(document).ready(function () {
             console.log('Reserva não encontrada');
         }
     });
+
+    $('#pagarpagar').click(function () {
+        var reservas = JSON.parse(localStorage.getItem('reservas'));
+        reservas[numerorandom].pagou = true;
+        localStorage.setItem('reservas', JSON.stringify(reservas));
+        window.location.href = "pagamento.html";
+    });
+
+    
+
+   
 });
 
