@@ -7,6 +7,8 @@ body {
     animation: fadeIn 1s ease-in;
     overflow-x: hidden;
     margin: 0;
+    height: 100vh;
+    max-width: 100%;
     padding: 0;
     background-size: cover;
     font-family: "Quicksand", sans-serif;
@@ -18,6 +20,8 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 1%;
+    max-width: 100%;
+    height: 100vh;
     
 }
 .cabeçalho{
@@ -25,6 +29,7 @@ body {
     padding: 20px;
     text-align: center;
     border-bottom: 1px solid #ccc;
+    max-width: 100%;
 }
 
 .coluna{
@@ -35,7 +40,8 @@ body {
     justify-content: left;
     text-align: left;
     margin: 10px;
-    height: 60vh;
+    height: 100vh;
+    max-width: 100%;
     padding: 20px;
     background-color: #f2f2f2;
     border: 1px solid #ccc;
@@ -65,6 +71,7 @@ justify-content: center; /* Alinha os itens horizontalmente no centro */
 align-items: center; /* Alinha os itens verticalmente */
 flex-direction: column; /* Faz os itens ficarem em uma linha */
 }
+
 
 .menu {
 display: flex;
@@ -125,12 +132,33 @@ margin-top: auto;
     padding: 1%;
     justify-content: center;
     margin: 10px;
+    height: 50%;
+    width: 95%;
     flex-wrap: wrap;}
 
 .imagensantigas img{
     width: 20%;
-    height: 300px;
+    height: 30vh;
     margin-left: 0.5%;
+    max-width: 100%;
     margin-right: 0.5%;
 }
    
+@media (max-width: 1367px) {
+    .conteudo, .coluna {
+        /* Ajuste o estilo conforme necessário para dispositivos menores */
+        /* Por exemplo: */
+        height: 150vh;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .imagensantigas img {
+        width: 15%;
+        height: 20vh;
+        margin-left: 0.5%;
+        max-width: 100%;
+        margin-right: 0.5%;
+    }
+}
