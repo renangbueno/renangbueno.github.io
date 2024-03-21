@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/pagamento.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Oswald&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="imagem-menu">
+            <div class="menu">
+                <p>Pagamento Nova Era Barber</p>
+            </div>
+        </div>
+    </header>
+    <div class="conteudo">   
+        <div class="coluna">
+            <div class="pagamento">
+                <h2>Escolha a forma de pagamento:</h2>
+                <div class="botaoescolha">                
+                    <button type="button" class="botaopag"><strong>Pix</strong><span class="textoaux">5% de desconto</span></button>
+                    <div class="sanfonapix">
+                        <p>Para realizar o pagamento via Pix, utilize a chave: +55 (43)98406-3532</p>
+                        <button type="button" class="botaopix">Copiar chave</button>
+                        <button type="button" class="botaopix">Abrir QR Code</button>
+                        <button>Pagar</button>
+                    </div>
+                </div>
+                <div class="botaoescolha">  
+                    <button type="button" class="botaopag"><strong>Cartão de Crédito</strong><span class="textoaux">Até 6x sem juros</span></button>
+                    <div class="sanfonacartao">
+                        <p>Insira os dados do seu cartão:</p>
+                        <input type="text" id="nomeCartaoCredito" name="nome" placeholder="Nome do titular" required>
+                        <input type="text" id="numeroCartaoCredito" name="numero" placeholder="Número do cartão" required>
+                        <input type="text" id="validadeCartaoCredito" name="validade" placeholder="Validade" required>
+                        <input type="text" id="cvvCartaoCredito" name="cvv" placeholder="CVV" required>
+                        <br>
+                        <button>Pagar</button>
+                    </div>
+                </div>
+                <div class="botaoescolha">  
+                    <button type="button" class="botaopag"><strong>Cartão de débito</strong></button>
+                    <div class="sanfonacartaodeb">
+                        <p>Insira os dados do seu cartão:</p>
+                        <input type="text" id="nomeCartaoDebito" name="nome" placeholder="Nome do titular" required>
+                        <input type="text" id="numeroCartaoDebito" name="numero" placeholder="Número do cartão" required>
+                        <input type="text" id="validadeCartaoDebito" name="validade" placeholder="Validade" required>
+                        <input type="text" id="cvvCartaoDebito" name="cvv" placeholder="CVV" required>
+                        <br>
+                        <button>Pagar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright &copy; 2024 Nova Era Barber Lounge</p>
+        <p><a href="mailto:exemplo@empresa.com">exemplo@empresa.com</a></p>
+    </footer>
+    <script>
+        
+    $(document).ready(function() {
+        $('.botaoescolha .botaopag').click(function() {
+        // Seleciona o elemento .sanfona correspondente
+        var sanfona = $(this).next();
+
+        // Alterna a classe 'aberto' no elemento .sanfona
+        sanfona.toggleClass('aberto');
+    });
+    // Adiciona um evento de clique aos botões 'Pagar'
+    $('button:contains("Pagar")').click(function() {
+        // Exibe um alerta
+        alert('Pagamento confirmado!');
+        window.location.href = 'reservas.html';
+    });
+
+    $('button:contains("Copiar chave")').click(function() {
+        // Exibe um alerta
+        alert('Chave copiada!');
+    });
+
+    $('button:contains("Abrir QR Code")').click(function() {
+        // Exibe um alerta
+        alert('QR Code aberto!');
+    });
+});
+    </script>
+</body>
+</html>

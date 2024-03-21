@@ -23,28 +23,29 @@
     </header>
     <div class="conteudo">   
         <div class="coluna">    
+            <form id="form-reserva">
             <h2>Faça sua reserva</h2>
             <p>Escolha sua unidade:</p>
             <div class="botoes">
                 <input type="radio" id="btn1" name="radioBtn" class="hidden-radio">
-                <label for="btn1" class="styled-button"><b>Unidade 1</b><br><span class="subtexto">Avenida XV de novembro, 554</span></label>
+                <label for="btn1" class="styled-button"><b>Barbearia Dom Cabral</b><br><span class="subtexto">Avenida XV de fevereiro, 82</span></label>
             
                 <input type="radio" id="btn2" name="radioBtn" class="hidden-radio">
-                <label for="btn2" class="styled-button"><b>Unidade 2</b><br><span class="subtexto">Avenida Barao Rio Branco, 699</span></label>
+                <label for="btn2" class="styled-button"><b>Barbearia Cortes & Estilos</b><br><span class="subtexto">Rua Colombo, 155</span></label>
             
                 <input type="radio" id="btn3" name="radioBtn" class="hidden-radio">
-                <label for="btn3" class="styled-button"><b>Unidade 3</b><br><span class="subtexto">Rua sei la o que, 123</span></label>
+                <label for="btn3" class="styled-button"><b>Barbearia Vintage</b><br><span class="subtexto">Avenida Minas Gerais, 682</span></label>
             
                 <input type="radio" id="btn4" name="radioBtn" class="hidden-radio">
-                <label for="btn4" class="styled-button"><b>Unidade 4</b><br><span class="subtexto">Rua Minas Gerais, 221</span></label>
+                <label for="btn4" class="styled-button"><b>Barbearia Clássica</b><br><span class="subtexto">Avenida Alberto Carazzai, 181</span></label>
             </div>
             <p>Insira seu nome e sobrenome:</p>
-            <input type="text" id="nome" name="nome" placeholder="Nome e sobrenome">
+            <input type="text" id="nome" name="nome" placeholder="Nome e sobrenome" required>
             <p>Insira seu telefone:</p>
-            <input type="tel" name="telefone" size="20" minlength="10" maxlength="11" id="telefone" name="telefone" placeholder="43911111111">
+            <input type="tel" name="telefone" size="20" minlength="10" maxlength="11" id="telefone" name="telefone" placeholder="43911111111" required>
             <p>Escolha o dia e horário:</p>            
             <input type="date" id="dia" name="dia" required>
-            <select class="horario" id="horario">
+            <select class="horario" id="horario" required>
                 <option value="08:00">08:00</option>
                 <option value="08:30">08:30</option>
                 <option value="09:00">09:00</option>
@@ -53,14 +54,15 @@
                 <option value="10:30">10:30</option>
               </select>
             <p>Escolha o serviço:</p>
-            <select class="horario" id="servico">
+            <select class="horario" id="servico" required>
                 <option value="Corte">Corte (R$30)</option>
                 <option value="Barba">Barba (R$25)</option>
                 <option value="Corte e Barba">Corte e Barba (R$45)</option>
                 <option value="Pacote">Pacote (R$60)</option>
               </select>
               <br>
-            <button class="botao" id="botao">Reservar</button>
+            <button class="botao" id="reservar">Reservar</button>
+        </form>
         </div>
     </div>
     <div class="conteudo">
@@ -69,8 +71,13 @@
             <p>Insira seu telefone:</p>
             <input type="tel" name="telefone" size="20" minlength="10" maxlength="11" id="telefone2" name="telefone" placeholder="43911111111">
             <p>Insira número da reserva:</p>
-            <input type="text" id="reserva" name="reserva" placeholder="Número da reserva"><br>
-            <button class="botao" id="botao2">Ver reserva</button>
+            <input type="text" id="numreserva" name="reserva" placeholder="Número da reserva"><br>
+            <button class="botao" id="verreserva">Ver reserva</button>
+            <p id="dadoscliente"></p>
+            <div id="divpagamento" class="pagpix">
+                <p id="dadospagamento"></p>
+                <button class="botao" id="pagarpagar">Pagar</button>
+            </div>
         </div>
     </div>
     <footer>
