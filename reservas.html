@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reserva Barbearia</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/reservas.css">
@@ -52,6 +52,7 @@
                 <option value="09:30">09:30</option>
                 <option value="10:00">10:00</option>
                 <option value="10:30">10:30</option>
+                <option value="11:00">11:00</option>
               </select>
             <p>Escolha o serviço:</p>
             <select class="horario" id="servico" required>
@@ -124,8 +125,8 @@
             for (var i = 0; i < reservas.length; i++) {
                 if (reservas[i].telefone === telefone && reservas[i].nreserva === nreserva) {
         
-                    $('#dadoscliente').html('Olá, ' + reservas[i].nome + '<br>Seu telefone é: ' + reservas[i].telefone + '<br>Você tem uma reserva para o dia: ' + reservas[i].dia + 
-                    '<br>Horário: ' + reservas[i].horario + '<br>Serviço: ' + reservas[i].servico + '<br>Valor: R$ ' + valores[reservas[i].servico] + ',00' + '<br>Número da reserva: ' + reservas[i].nreserva);
+                    $('#dadoscliente').html('Olá, <b>' + reservas[i].nome + '</b><br><b>Telefone:</b> ' + reservas[i].telefone + '<br><b>Você tem uma reserva para o dia:</b> ' + reservas[i].dia + 
+                    '<br><b>Horário:</b> ' + reservas[i].horario + '<b><br>Serviço:</b> ' + reservas[i].servico + '<br><b>Valor:</b> R$ ' + valores[reservas[i].servico] + ',00' + '<br><b>Número da reserva:</b> ' + reservas[i].nreserva + '');
                     if(reservas[i].pagou === true){
                         $('#pagarpagar').hide();
                         $('.pagpix').show();
@@ -169,12 +170,7 @@
                 localStorage.setItem('reservas', JSON.stringify(reservas));
                 window.location.href = "pagamento.html";
             });
-        
-            
-        
-           
         });
-        
-        </script>
+    </script>
 </body>
 </html>
