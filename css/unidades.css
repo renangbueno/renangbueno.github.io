@@ -50,7 +50,7 @@ body {
 }
 
 .coluna.hover{
-    height: 400px;
+    height: 600px;
     transition: height 0.8s;
 }
 
