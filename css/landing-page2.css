@@ -26,6 +26,7 @@ body, html {
     padding: 1%;
     flex-direction: column;
     height: 100vh;
+    margin: 2%;
     
 }
 .cabeçalho{
@@ -53,7 +54,7 @@ body, html {
     padding: 20px;
     background-color: #ffffff;
     border: 1px solid #dbdbdb;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 
 }
 
@@ -135,14 +136,16 @@ footer {
 }
 
 .botao {
+    width: auto;
+    min-width: 15%;
     margin-left: auto;
     margin-top: 3%;
     margin-right: 1%;
-    width: 15%;
     display: inline-block;
-    font-size: 22px;
     text-align: center;
-    padding: 24px 28px;
+    white-space: normal;
+    font-size: min(1.5vw, 15px);
+    padding: min(24px, 2vw) 28px;
     transition: all 0.3s ease 0s;
     cursor: pointer;
     border-radius: 50px;
@@ -167,3 +170,117 @@ footer {
     box-shadow: 0 5px 14px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.10);
 }
    
+
+@media (max-width: 600px) {
+    .conteudo {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .coluna {
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .botao {
+        width: 15%;
+        margin: 16px;
+        font-size: 20px;
+        margin-left: auto;
+        margin-top: 3%;
+        margin-right: 1%;
+    }
+}
+
+@media (max-width: 900px) {
+    .conteudo {
+        height: 100vh;
+        flex-direction: column;
+        margin-bottom: 2vh;
+    }
+
+    .coluna {
+        height: 100vh;
+        margin: 10px 0;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .botao {
+        width: auto;
+        min-width: 15%;
+        padding: min(24px, 2vw) 1em;
+        font-size: 18px;
+        margin-left: auto;
+        margin-top: 3%;
+        margin-right: 1%;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+    .conteudo {
+        flex-direction: row;
+        margin-bottom: 2vh;
+        height: 100vh;
+    }
+
+    .coluna {
+        width: 50%;
+        height: 100vh;
+        margin: 10px;
+    }
+
+    .menu {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .botao {
+        width: auto;
+        min-width: 15%;
+        padding: min(24px, 2vw) 1em;
+        margin: 20px;
+        font-size: 20px;
+        margin-left: auto;
+        margin-top: 3%;
+        margin-right: 1%;
+    }
+}
+
+@media (min-width: 1201px) {
+    .conteudo {
+        flex-direction: row;
+        margin-bottom: 10%;
+        height: 100vh;
+    }
+
+    .coluna {
+        width: 33.33%;
+        margin: 10px;
+        height: 110vh;
+        margin-bottom: 2vh;
+    }
+
+    .menu {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .botao {
+        width: auto;
+        min-width: 15%;
+        padding: min(24px, 2vw) 1em;
+        margin-left: auto;
+        margin-top: 3%;
+        margin-right: 1%;
+        font-size: 110%;
+    }
+}
