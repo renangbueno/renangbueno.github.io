@@ -69,9 +69,9 @@
                 <h2 style="margin-bottom: 0.5%;">Barbearia Clássica</h2>
                 <p style="margin-top: 0;  font-style: italic;">Avenida Alberto Carazzai, 181</p>
                 <div class="grid-container">
-                    <img src="quadrado.png" alt="Foto 1">
-                    <img src="quadrado.png" alt="Foto 2">
-                    <img src="quadrado.png" alt="Foto 3">
+                        <img src="quadrado.png" alt="Foto 1">
+                        <img src="quadrado.png" alt="Foto 2">
+                        <img src="quadrado.png" alt="Foto 3">
                     <img src="quadrado.png" alt="Foto 3">
                     <img src="quadrado.png" alt="Foto 1">
                     <img src="quadrado.png" alt="Foto 2">
@@ -83,18 +83,4 @@
         <p><a href="mailto:exemplo@empresa.com">exemplo@empresa.com</a></p>
     </footer>
 </body>
-<script>
-    $(document).ready(function(){
-        var hoverTimeout;
-        $('.coluna').hover(function() {
-            var $this = $(this); // referência ao elemento atual
-            hoverTimeout = setTimeout(function() {
-                $this.addClass('hover');
-            }, 1000); // 1000ms = 1s
-        }, function() {
-            clearTimeout(hoverTimeout);
-            $(this).removeClass('hover');
-        });
-    });
-    </script>
 </html>
