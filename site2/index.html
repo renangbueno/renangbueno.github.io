@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="titulonav">
+            <h1>teste</h1>
+        </div>
+
+        <ul class="listanav">
+            <li><a href="#inicio" class="itemnav">Inicio</a></li>
+            <li><a href="#produtos" class="itemnav">Produtos</a></li>
+            <li><a href="#teste" class="itemnav">Teste</a></li>
+            <li><a href="#teste2" class="itemnav">Teste2</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="inicio">Inicio</section>
+        <section id="produtos">Teste</section>
+        <section id="teste">Seila</section>
+        <section id="teste2">Teste</section>
+    </main>
+    <script>
+        const secoes = [...document.querySelectorAll("section")];
+        const getLinkById = (id) => document.querySelector(`a[href='#${id}']`);
+
+        const inView = (section) => {
+            let top = section.offsetTop;
+            let height = section.offsetHeight;
+        
+            while (section.offsetParent) {
+                section = section.offsetParent;
+                top += section.offsetTop;
+            }
+        
+            return (
+                top < window.scrollY + window.innerHeight &&
+                top + height > window.scrollY
+            );  
+        };
+        
+        window.onscroll = () => {
+            let next = false;
+        
+            secoes.forEach((secoes) => {
+            const a = getLinkById(secoes.id);
+        
+            if (inView(secoes) && !next) {
+                a.classList.add("nav--current");
+                next = true;
+            } else {
+                a.classList.remove("nav--current");
+            }
+            });
+        };
+        
+    </script>
+</body>
+</html>
