@@ -75,9 +75,9 @@ section {
     flex-direction: column;
     width: 80vw;
     
-    height: 80vh;
+    height: auto;
     margin: 3rem 0 3rem 0;
-    padding: 4rem;
+    padding: 2rem;
     background-color: #fff9f9;
 }
 
@@ -164,6 +164,28 @@ section {
     color: RGB(255, 255, 255);
 }
 
+.button_reserva{
+    background-color: #004792; /* Cor de fundo */
+    border: none; /* Sem bordas */
+    color: white; /* Cor do texto */
+    padding: 15px 32px; /* Espaçamento interno */
+    text-align: center; /* Alinhamento do texto */
+    text-decoration: none; /* Sem sublinhado */
+    display: inline-block;
+    font-size: 16px; /* Tamanho da fonte */
+    margin-top: 20px;
+    cursor: pointer; /* Muda o cursor para um ponteiro quando você passa o mouse */
+    border-radius: 4px; /* Bordas arredondadas */
+    transition-duration: 0.4s; /* Duração da transição */
+    width: 100%;
+
+}
+
+.button_reserva:hover {
+    background-color: #003c7c; /* Cor de fundo quando o mouse passa por cima */
+    color: white; /* Cor do texto quando o mouse passa por cima */
+}
+
 .star-rating {
     display: flex;
     justify-content: start;
@@ -198,11 +220,27 @@ section {
     grid-template-columns: repeat(2,1fr);
     grid-gap: 10px;
     margin-top: 10vh;
-    height: 150rem;
+    height: auto;
 }
 
+.forma_pagamento {
+    margin-bottom: 20px;
+}
+
+.forma_pagamento p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.forma_pagamento label {
+    margin-right: 10px;
+}
+
+.forma_pagamento input[type="radio"] {
+    margin: 0 10px 0 5px;
+}
 .unidades{
-    height: 100vh;
+    height: auto;
     width: 53rem;
     border: 1px solid black;
     padding: 3rem;
@@ -261,7 +299,7 @@ input[type=checkbox]{
 }
 
 .unidade_header h1{
-    margin-bottom: 0.5em;
+    margin-bottom: 0.1em;
     font-size: 1em;
     position: relative;
     text-align: center;
@@ -278,30 +316,30 @@ input[type=checkbox]{
     color: #414141
 }
 
-#form-reserva{
+#form-reserva, #verreserva {
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#form-reserva label{
+#form-reserva label, #verreserva label {
     font-size: 0.3em;
     padding: 10px;
     text-transform: uppercase;
     font-weight: 300;
+    width: 100%;
 }
 
-#form-reserva h1{
+#form-reserva h1, #verreserva h1 {
     text-align: center;
     font-size: 1.2em;
     margin: 0;
     padding: 0;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
-#form-reserva input,
-#form-reserva select {
+#form-reserva input, #form-reserva select, #verreserva input, #verreserva select {
     width: 50em;
     padding: 10px;
     border: none;
@@ -311,35 +349,138 @@ input[type=checkbox]{
     transition: box-shadow 0.3s ease;
 }
 
-#form-reserva input[type="text"]:focus,
-#form-reserva select:focus {
+#form-reserva input[type="text"]:focus, #form-reserva select:focus, #verreserva input[type="text"]:focus, #verreserva select:focus {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     outline: none;
 }
 
 .formulario{
     display: flex;
-    flex-direction: column;
     width: 400px;
-    justify-content: center;
     align-items: center;
     text-align: left;
 }
 
-.formulario label {
+.formulario label, .formulario_verreserva label{
     align-self: start;
+    width: 100%;
+}
+
+.botoes_unidades{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    width: 100%;
+}
+
+.radio-button input[type="radio"] {
+    display: none;
+}
+
+.radio-button input[type="radio"] + span {
+    width: 100%;
+    display: inline-block;
+    padding: 5px 10px;
+    border: none;
+    background-color: #cecece;
+    color: rgb(0, 0, 0);
+    text-align: center  ;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.radio-button input[type="radio"]:checked + span {
+    background-color: #003c7c;
+    color: white;
 }
 
 @media (min-width: 600px) {
-    .formulario {
+    .formulario, .formulario_verreserva {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
     }
 
-    .formulario label,
-    .formulario input,
-    .formulario select {
+    .formulario label, .formulario input, .formulario select, .formulario_verreserva label, .formulario_verreserva input, .formulario_verreserva select {
         width: calc(50% - 10px);
     }
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  .modal-body {padding: 2px 16px;}
+
+.pagamento {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 4px;
 }

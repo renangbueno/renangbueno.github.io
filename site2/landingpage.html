@@ -210,10 +210,28 @@
                     <form id="form-reserva">
                         <h1>Teste</h1>
                         <div class="formulario">
+                            <div class="botoes_unidades">
+                                <label class="radio-button">
+                                    <input type="radio" name="option" value="1">
+                                    <span>Opção 1</span>
+                                </label>
+                                <label class="radio-button">
+                                    <input type="radio" name="option" value="2">
+                                    <span>Opção 2</span>
+                                </label>
+                                <label class="radio-button">
+                                    <input type="radio" name="option" value="1">
+                                    <span>Opção 3</span>
+                                </label>
+                                <label class="radio-button">
+                                    <input type="radio" name="option" value="2">
+                                    <span>Opção 4</span>
+                                </label>
+                            </div>
                             <label for="nome">Nome:</label>
                             <input type="text" id="nome">
                             <label for="telefone">Telefone:</label>
-                            <input type="tel" id="telefone">
+                            <input type="tel" id="telefone" placeholder="(XX) XXXXX-XXXX">
                             <label for="dia">Dias disponíveis:</label>
                             <input type="date" id="dia">
                             <label for="horario">Horários disponíveis:</label>
@@ -230,12 +248,42 @@
                                 <option value="Corte e Barba">Corte & Barba (R$45)</option>
                                 <option value="Pacote">Pacote Esfoliação (R$231323)</option>
                             </select>
+                            <button class="button_reserva" id="criar_reserva">Reservar</button>
                     </div>
                     </form>
                 </div>
 
         </section>
-
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 id="modal_titulo"></h2>
+              </div>
+              <div class="modal-body">
+                <p id="modal_texto"></p>
+                <button id="pagamento_app" class="pagamento">Pagamento pelo app</button>
+              </div>
+            </div>
+          
+          </div>
+        <section id="verreserva">
+            <div class="cards_container">
+                <div class="card">
+                    <form id="verreserva">
+                        <h1>Teste</h1>
+                        <div class="formulario">
+                            <label for="consulta_telefone">Telefone:</label>
+                            <input type="tel" id="consulta_telefone">
+                            <label for="consulta_reserva">Número da reserva:</label>
+                            <input type="text" id="consulta_reserva">
+                            <button class="button_reserva" id="ver_reserva">Consulta</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
     <script src="script.js"></script>
 </body>
